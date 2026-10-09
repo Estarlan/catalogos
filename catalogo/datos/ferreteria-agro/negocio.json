@@ -1,0 +1,28 @@
+{
+  "nombre": "Agro y Ferretería La Esperanza (demo)",
+  "eslogan": "Todo para tu obra, tu finca y tu día a día.",
+  "whatsapp": "573000000000",
+  "colorPrincipal": "#23533c",
+  "logo": "",
+  "direccion": "Dirección de ejemplo · [ficticia]",
+  "horario": "Lun–sáb · 7:00 a. m.–6:00 p. m.",
+  "ciudad": "Florencia, Caquetá",
+  "entrega": {
+    "domicilio": true,
+    "recoger": true,
+    "notaCosto": "El domicilio se cotiza según tu ubicación y no está incluido en el total."
+  },
+  "metodosPago": [
+    "Efectivo",
+    "Nequi",
+    "Daviplata",
+    "Transferencia"
+  ],
+  "pedidoMinimo": 0,
+  "modoDemo": true,
+  "credito": {
+    "texto": "Catálogo hecho por Juan Polo · Pide el tuyo",
+    "url": "https://estarlan.github.io/catalogos/"
+  },
+  "sheetCsvUrl": ""
+}

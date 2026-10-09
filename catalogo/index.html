@@ -1,0 +1,61 @@
+<!-- Created: 23:55 07-Oct-2026 -->
+<!doctype html>
+<html lang="es-CO">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#23533c">
+  <meta name="description" content="Explora nuestro catálogo, arma tu pedido y envíalo por WhatsApp.">
+  <title>Catálogo · Haz tu pedido</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/catalogo.css">
+  <link rel="stylesheet" href="css/pedido.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#catalogo">Ir a los productos</a>
+  <div class="demo-strip" id="demo-strip" hidden>ESTÁS EXPLORANDO UNA DEMO <a href="demos.html">Ver otros negocios ↗</a></div>
+  <header class="business-header wrap">
+    <div class="brand-mark" id="logo" aria-hidden="true">C</div>
+    <div class="business-heading"><p class="eyebrow" id="ciudad">COMPRA LOCAL, COMPRA FÁCIL</p><h1 id="nombre-negocio">Nuestro catálogo</h1></div>
+    <button class="icon-button share-button" id="compartir" type="button" aria-label="Compartir catálogo"><span aria-hidden="true">↗</span><span>Compartir catálogo</span></button>
+  </header>
+  <main>
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy"><p class="eyebrow">CERCA DE TI. A UN MENSAJE.</p><h2 id="hero-title">Lo que necesitas,<br><em>sin dar tantas vueltas.</em></h2><p id="eslogan">Elige tus productos y haz tu pedido por WhatsApp.</p><div class="hero-meta"><span id="horario"></span><span id="opciones-entrega"></span></div></div>
+      <div class="hero-stamp" aria-hidden="true"><span>ELIGE · AGREGA · ESCRÍBENOS</span><strong>Hecho<br>fácil.</strong><span>DIRECTO A NUESTRO WHATSAPP ↗</span></div>
+    </section>
+    <section class="catalog-section wrap" id="catalogo" aria-labelledby="catalog-title">
+      <div class="section-heading"><div><p class="eyebrow">ENCUENTRA TU PRÓXIMO PEDIDO</p><h2 id="catalog-title">Nuestro catálogo<span class="title-dot">.</span></h2></div><p id="conteo" aria-live="polite">Cargando productos…</p></div>
+      <div class="catalog-tools"><label class="search-field"><span aria-hidden="true">⌕</span><span class="sr-only">Buscar productos</span><input id="buscar" type="search" placeholder="¿Qué estás buscando?" autocomplete="off" maxlength="100"><kbd aria-hidden="true">Buscar</kbd></label><div class="chips" id="categorias" role="group" aria-label="Filtrar por categoría"></div></div>
+      <p class="notice" id="aviso-datos" role="status" hidden></p>
+      <div class="product-grid" id="productos" aria-busy="true"></div>
+      <div class="empty-state" id="sin-resultados" hidden><span aria-hidden="true">⌕</span><h3>No encontramos ese producto</h3><p>Prueba con otra palabra o categoría.</p><button class="secondary" id="limpiar-filtros" type="button">Ver todos los productos</button></div>
+      <noscript><p class="notice">Activa JavaScript en tu navegador para ver los productos y armar tu pedido.</p></noscript>
+    </section>
+    <section class="how-to wrap" aria-label="Cómo pedir"><p><span>01</span> Elige tus favoritos</p><p><span>02</span> Arma tu pedido</p><p><span>03</span> Hablemos por WhatsApp ↗</p></section>
+  </main>
+  <footer class="site-footer wrap"><div><strong id="footer-nombre"></strong><p id="footer-direccion"></p><p id="footer-horario"></p></div><div><p>Tu pedido se confirma por WhatsApp.</p><p id="credito"></p></div></footer>
+  <div class="cart-dock"><button class="cart-open" id="abrir-carrito" type="button" disabled aria-haspopup="dialog"><span class="cart-count" id="cantidad-carrito">0</span><span class="cart-label">Ver mi pedido<span id="detalle-carrito">Agrega algo que te guste</span></span><strong id="total-carrito">$ 0</strong><span aria-hidden="true">↗</span></button></div>
+  <dialog id="carrito-dialog" class="cart-dialog" aria-labelledby="carrito-title">
+    <div class="dialog-heading"><div><p class="eyebrow">YA CASI ESTÁ</p><h2 id="carrito-title">Tu pedido<span class="title-dot">.</span></h2></div><button class="icon-button" type="button" data-cerrar aria-label="Cerrar pedido" autofocus>×</button></div>
+    <div id="lineas-carrito" class="cart-lines"></div>
+    <p class="notice" id="minimo-aviso" role="status" hidden></p>
+    <form id="pedido-form">
+      <fieldset><legend>¿A nombre de quién?</legend><label for="cliente">Tu nombre <span>(obligatorio)</span></label><input id="cliente" name="nombre" autocomplete="name" required maxlength="80" placeholder="Escribe tu nombre"></fieldset>
+      <fieldset><legend>¿Cómo lo recibes?</legend><div class="delivery-options" id="entrega-opciones"></div><div id="direccion-grupo"><label for="direccion">Dirección de entrega <span>(obligatoria)</span></label><input id="direccion" name="direccion" autocomplete="street-address" maxlength="220" placeholder="Calle, número, barrio y referencia"></div><p class="field-note" id="nota-domicilio"></p></fieldset>
+      <fieldset><legend>Los últimos detalles</legend><label for="pago">Método de pago</label><select id="pago" name="pago" required></select><label for="notas">Notas <span>(opcional)</span></label><textarea id="notas" name="notas" maxlength="500" rows="3" placeholder="Algo que debamos saber sobre tu pedido…"></textarea></fieldset>
+      <div class="order-total"><span>Total de productos</span><strong id="pedido-total"></strong></div><p class="field-note" id="resumen-entrega"></p>
+      <button class="primary send-order" id="enviar-pedido" type="submit">Enviar pedido por WhatsApp <span aria-hidden="true">↗</span></button><p class="privacy-note">Se abrirá WhatsApp con tu pedido listo. Allí podrás enviarlo y confirmar disponibilidad y entrega.</p>
+    </form>
+  </dialog>
+  <dialog id="demo-dialog" class="demo-dialog" aria-labelledby="demo-title">
+    <div class="dialog-heading"><p class="eyebrow">PRUÉBALO EN TU CELULAR</p><button class="icon-button" type="button" data-cerrar aria-label="Cerrar prueba">×</button></div>
+    <h2 id="demo-title">¿A qué WhatsApp enviamos este pedido de prueba?</h2><p>Escribe tu número y mira cómo recibiría el pedido un negocio.</p>
+    <form id="demo-form"><label for="demo-numero">Celular colombiano</label><div class="phone-field"><span>+57</span><input id="demo-numero" type="tel" inputmode="numeric" autocomplete="tel-national" pattern="3[0-9]{9}" minlength="10" maxlength="10" placeholder="3001234567" required aria-describedby="numero-ayuda" autofocus></div><p class="field-note" id="numero-ayuda">10 dígitos, empieza por 3. Solo se usa para abrir este pedido.</p><label for="mensaje-preview">Así llegará tu pedido</label><pre id="mensaje-preview" tabindex="0" aria-label="Vista previa del mensaje"></pre><button class="primary" type="submit">Abrir pedido de prueba en WhatsApp ↗</button></form>
+  </dialog>
+  <dialog id="compartir-dialog" aria-labelledby="compartir-title"><div class="dialog-heading"><h2 id="compartir-title">Comparte el catálogo</h2><button class="icon-button" type="button" data-cerrar aria-label="Cerrar enlace">×</button></div><p>No pudimos copiar automáticamente. Mantén presionado el enlace para copiarlo.</p><label for="enlace-catalogo">Enlace del catálogo</label><input id="enlace-catalogo" readonly></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>
