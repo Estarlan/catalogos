@@ -1,5 +1,6 @@
 // Created: 22:11 16-Oct-2026
 // Updated: 22:11 16-Oct-2026
+// Updated: 13:03 17-Oct-2026 (nota del modo "elegir")
 import { armarMensaje, calcularCarrito, enlaceCanal } from './core.js';
 import { $, abrirDialogo, avisar } from './ui.js';
 import { estado } from './estado.js';
@@ -42,7 +43,10 @@ export async function prepararPedido(id, cantidad = 1) {
 export function prepararContacto() {
   const telegram = estado.tienda.canal === 'telegram';
   $('#checkout-label').textContent = `Enviar por ${telegram ? 'Telegram' : 'WhatsApp'}`;
-  document.querySelector('.checkout-note').textContent = `${telegram ? 'Usuario' : 'Número'} de prueba · Esta es una tienda de muestra.`;
+  const elegir = !telegram && String(estado.tienda.whatsapp ?? '').trim() === 'elegir';
+  document.querySelector('.checkout-note').textContent = elegir
+    ? 'Tienda de muestra · elegís a qué chat mandarlo (podés mandártelo a vos).'
+    : `${telegram ? 'Usuario' : 'Número'} de prueba · Esta es una tienda de muestra.`;
   $('#checkout').addEventListener('click', () => prepararPedido());
   document.addEventListener('pedido', (event) => prepararPedido(event.detail.id, event.detail.cantidad));
   $('#copy-order').addEventListener('click', copiarPedido);
