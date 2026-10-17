@@ -1,0 +1,13 @@
+<!-- Created: 22:11 16-Oct-2026 -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 340">
+  <defs><pattern id="holes" width="19" height="19" patternUnits="userSpaceOnUse"><circle cx="9" cy="9" r="4.2" fill="#19201d"/></pattern><linearGradient id="face" x2="1" y2="1"><stop stop-color="#525c50"/><stop offset="1" stop-color="#303b31"/></linearGradient></defs>
+  <path d="m93 203 1 58h32l1-58" fill="#29332c" stroke="#c88870" stroke-width="5"/>
+  <path d="m95 216 15 23 15-23" fill="none" stroke="#dba387" stroke-width="5"/>
+  <path d="M110 13 185 60q19 16 9 54l-25 62q-16 35-59 40-43-5-59-40l-25-62q-10-38 9-54Z" fill="#222d26" stroke="#d69578" stroke-width="7"/>
+  <path d="m110 26 67 42q16 13 5 45l-23 57q-14 30-49 33-35-3-49-33l-23-57q-11-32 5-45Z" fill="url(#face)"/>
+  <path d="m110 35 60 39q11 8 1 37l-22 56q-10 23-39 26-29-3-39-26l-22-56q-10-29 1-37Z" fill="url(#holes)"/>
+  <path d="m57 137 53-65 53 65h-28l-25-31-25 31Z" fill="#e4a18a"/>
+  <path d="M94 257h32v64q-16 11-32 0Z" fill="#e6d9c5" stroke="#263029" stroke-width="3"/>
+  <path d="m96 266 28 9m-28 1 28 9m-28 1 28 9m-28 1 28 9m-28 1 28 9" stroke="#b4aa98" stroke-width="2"/>
+  <text x="110" y="177" fill="#f2d6c4" font-family="sans-serif" font-size="9" letter-spacing="3" text-anchor="middle">PUNTO</text>
+</svg>

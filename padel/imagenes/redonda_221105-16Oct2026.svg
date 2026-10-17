@@ -1,0 +1,14 @@
+<!-- Created: 22:11 16-Oct-2026 -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 340">
+  <defs><pattern id="holes" width="19" height="19" patternUnits="userSpaceOnUse"><circle cx="9" cy="9" r="4.1" fill="#142b25"/></pattern><linearGradient id="frame" x2="1" y2="1"><stop stop-color="#dbe5bc"/><stop offset=".5" stop-color="#9cae81"/><stop offset="1" stop-color="#d9e6bd"/></linearGradient></defs>
+  <path d="M94 205 93 261h34l-1-56" fill="#1e3028" stroke="#aabd91" stroke-width="5"/>
+  <path d="m96 218 14 20 14-20" fill="none" stroke="#b8c995" stroke-width="5"/>
+  <ellipse cx="110" cy="113" rx="90" ry="100" fill="#152d26" stroke="url(#frame)" stroke-width="7"/>
+  <ellipse cx="110" cy="112" rx="78" ry="88" fill="#406d52" stroke="#c8da9e" stroke-width="1.5"/>
+  <ellipse cx="110" cy="112" rx="71" ry="81" fill="url(#holes)"/>
+  <path d="m62 139 36-65h27l-36 65Zm39 0 36-65h19l-36 65Z" fill="#d8ee71" opacity=".93"/>
+  <path d="M94 257h32v64q-16 11-32 0Z" fill="#e2e4d3" stroke="#182e27" stroke-width="3"/>
+  <path d="m96 266 28 9m-28 1 28 9m-28 1 28 9m-28 1 28 9m-28 1 28 9" stroke="#a9b3a2" stroke-width="2"/>
+  <path d="M96 324q14 6 28 0" fill="none" stroke="#182e27" stroke-width="6"/>
+  <text x="110" y="176" fill="#ecf1d9" font-family="sans-serif" font-size="9" letter-spacing="3" text-anchor="middle">PUNTO</text>
+</svg>
